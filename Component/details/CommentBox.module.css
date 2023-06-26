@@ -1,0 +1,221 @@
+.comments_container {
+  margin: 1rem 0;
+  background-color: var(--white);
+  text-transform: capitalize;
+  padding: 1rem 0;
+  border-radius: 10px;
+}
+
+.comments_container h4 {
+  padding-left: 1rem;
+  color: var(--dk-blue);
+  letter-spacing: 0.2px;
+}
+
+.comment_box_db {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+/* .comment_box_db:not(:last-of-type) {
+
+} */
+
+.container_box_db {
+  width: 100%;
+}
+
+.container_box_db::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 90%;
+    height: 1px;
+    background-color:  rgba(140,146,179,.25);
+    z-index: 8;
+}
+
+.container_box_db:last-of-type::before {
+    background-color: transparent;
+}
+
+.container_box_db .comment_box_db > div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container_box_db .comment_box_db > div:first-of-type img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 45px !important;
+  height: 45px !important;
+}
+
+/* First of type */
+.container_box_db .comment_box_db > div:first-of-type > div:first-of-type {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.container_box_db .comment_box_db > div:first-of-type > div:first-of-type h5,
+.replay_container h5 {
+  color: var(--dk-blue);
+}
+
+.container_box_db .comment_box_db > div:first-of-type > div:first-of-type span {
+  color: var(--grey);
+}
+
+.container_box_db .comment_box_db > div:first-of-type > span,
+.replay_container > div:first-of-type > div:last-of-type span {
+  font-weight: bold; font-size: .75rem;
+  color: var(--sea-blue); cursor: pointer;
+  transition: border .2s linear;
+  border-bottom: 2px solid transparent;
+}
+
+.container_box_db .comment_box_db > div:first-of-type > span:hover {
+  border-color: var(--sea-blue);
+}
+
+/* Second of type  */
+.container_box_db .comment_box_db > div:nth-of-type(2) {
+  padding: 1.25rem 0;
+}
+
+.container_box_db .comment_box_db > div:nth-of-type(2) p,
+.replay_container > div:first-of-type > div:first-of-type span {
+  color: var(--grey);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.container_box_db .comment_box_db > div:nth-of-type(2) time,
+.replay_container > div:nth-of-type(2) time {
+  font-size: 0.7rem;
+  font-weight: bolder;
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--dk-blue);
+  width: 100%;
+  text-align: right;
+  padding-right: 4rem;
+}
+
+/* second of type && fourth of type */
+.container_box_db .comment_box_db > div:nth-of-type(2),
+.container_box_db .comment_box_db > form {
+  padding-left: calc(41px + 2rem);
+}
+
+@media (max-width: 767px) {
+  .container_box_db .comment_box_db > div:nth-of-type(2),
+  .container_box_db .comment_box_db > form {
+    padding-left: 0;
+  }
+}
+
+/* third of type replay comment info */
+  .replay_container {
+  padding-left: calc(41px + 2rem);
+  margin-bottom: 1.5rem;
+}
+
+ .replay_container > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.replay_container img {
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.replay_container h5 {
+  margin-bottom: .2rem;
+}
+
+
+.replay_container > div:last-of-type span {
+  color: var(--purple);
+  font-weight: bolder;
+  font-size: .85rem;
+}
+
+.replay_container > div:last-of-type p {
+  color: var(--grey); font-size: .95rem; line-height: 1.5;
+}
+
+.replay_container > div:first-of-type > div:first-of-type {
+  display: flex; align-items: center; justify-content: center; gap: 2rem;
+}
+
+.replay_container > div:nth-of-type(2) > div:first-of-type {
+  display: flex; align-items: center; justify-content: flex-start; gap: 1rem;
+}
+
+
+
+
+
+/* fourth Of Type */
+.container_box_db .comment_box_db > form {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container_box_db .comment_box_db > form textarea {
+  background-color: var(--lt-grey);
+  flex-basis: 70%;
+  height: 90%;
+  outline: none;
+  resize: none;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 1rem 1.5rem;
+  caret-color: var(--grey);
+  color: var(--grey);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: border 0.2s linear;
+}
+
+.container_box_db .comment_box_db > form textarea:focus {
+  border-color: #c75af6;
+}
+
+.container_box_db .comment_box_db > form div {
+  flex-basis: 22%;
+}
+
+.container_box_db .comment_box_db > form div button {
+  border: none;
+  outline: none;
+  width: 100%;
+  align-self: flex-start;
+  margin-top: 1rem;
+  padding: 0.7rem 0;
+  color: var(--white);
+  background-color: var(--purple);
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s linear;
+}
+
+.container_box_db .comment_box_db > form button:hover {
+  background-color: #c75af6;
+}

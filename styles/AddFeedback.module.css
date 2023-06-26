@@ -1,0 +1,274 @@
+.main {
+  background-color: var(--lt-grey);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main > a {
+  padding-bottom: 3rem;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: capitalize;
+  background-color: var(--lt-grey);
+  color: var(--grey);
+}
+
+.main > a svg {
+  margin-top: 0.1rem;
+}
+
+.main > a span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.1rem;
+  display: inline-block;
+}
+
+.main > a:hover span {
+  text-decoration: underline;
+}
+
+.main h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.main h2,
+.main h5,
+.main label {
+  color: var(--dk-blue);
+}
+
+.main .container {
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: #fff;
+  width: 500px;
+  position: relative;
+}
+
+.main .container > svg {
+  position: absolute;
+  top: -2rem;
+}
+
+.main .container form {
+  text-transform: capitalize;
+}
+
+.main .container form > div:last-of-type {
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 1rem;
+}
+
+.main .container form > div:last-of-type button {
+  border: none;
+  outline: none;
+  padding: 0.8rem 1rem;
+  color: var(--lt-grey);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: background 0.3s linear;
+}
+
+.main .container form > div:last-of-type button:first-of-type {
+  background-color: var(--dk-blue);
+}
+
+.main .container form > div:last-of-type button:last-of-type {
+  background-color: var(--purple);
+}
+
+.main .container form > div:last-of-type button:first-of-type:hover {
+  background-color: rgb(101, 110, 163);
+}
+
+.main .container form > div:last-of-type button:last-of-type:hover {
+  background-color: rgb(199, 90, 246);
+}
+
+.main .container form > div label {
+  display: block;
+  line-height: 1.5;
+}
+
+.main .container form > div label h5 {
+  margin-bottom: 0.5rem;
+}
+
+.main .container form > div textarea {
+  resize: none;
+  width: 100%;
+  height: 100px;
+  background-color: var(--lt-grey);
+  color: var(--grey);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.main .container form > div:not(:first-of-type) label h5 {
+  margin-top: 1rem;
+}
+
+.main .container form > div label small {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.main .container form div input {
+  height: 48px;
+  background-color: var(--lt-grey);
+  color: var(--grey);
+  font-family: Jost, sans-serif;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 0px 20px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .main .container,
+  .main > a {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .main .container,
+  .main > a {
+    width: 90%;
+  }
+
+  .main > a {
+    padding-top: 1rem;
+  }
+
+  .main h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    padding-top: 1rem;
+  }
+
+  .main .container {
+    padding: 1rem;
+  }
+
+  .main .container form > div:last-of-type {
+    justify-content: center;
+  }
+
+  .main .container form > div:last-of-type button {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+}
+
+.select {
+  height: 48px;
+  background-color: var(--lt-grey);
+  color: var(--grey);
+  border-radius: 10px;
+  padding: 0px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.select > div {
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.select > ul {
+  list-style: none;
+  background-color: var(--white);
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: -13rem;
+  width: 100%;
+  padding: 0 20px;
+  text-transform: capitalize;
+  line-height: 2.5;
+}
+
+.select > ul li button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s linear;
+  color: var(--grey);
+  user-select: none;
+  background-color: transparent;
+  text-transform: capitalize;
+  width: 100%;
+  text-align: left;
+}
+
+.select > ul li:hover button {
+  cursor: pointer;
+  color: var(--purple);
+}
+
+.btn_edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn_edit > div:first-of-type {
+  flex: 1;
+}
+
+.btn_edit > div:first-of-type button {
+  background-color: var(--red) !important;
+}
+
+.btn_edit > div:first-of-type:hover button {
+  background-color: #e98888 !important;
+}
+
+.btn_edit > div:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+/* btn-delete */
+
+.btn_delete > button{
+  transition: background .3s linear !important;
+  background-color: var(--dk-blue) !important;
+}
+
+.btn_delete > button:hover {
+  background-color: rgb(101, 110, 163) !important;
+
+}

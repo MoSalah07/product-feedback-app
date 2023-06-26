@@ -1,0 +1,178 @@
+
+.content_mobile nav {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border-bottom: .5px solid var(--grey); */
+    height: 10vh;
+    position: relative;
+    padding: 0;
+}
+
+.content_mobile nav::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--grey);
+}
+
+.content_mobile nav > div {
+    flex-basis:  33%;
+    height: 100%;
+    display: flex; align-items: center;
+    justify-content: center;
+}
+
+.content_mobile nav > div button {
+    color: var(--dk-blue);
+    font-weight: bold;
+    font-size: .8rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    height: 100%;
+    border-bottom: 4px solid transparent;
+    background-color: transparent;
+}
+
+.content_mobile nav > div button > span {
+    pointer-events: none;
+}
+
+.content_mobile nav > div button > span:last-of-type {
+    margin-left: .5rem;
+}
+
+.content_mobile nav > div button:nth-of-type(2) > span:last-of-type { margin-left: .4rem;}
+
+
+
+
+/* content_all_mobile */
+
+.content_all_mobile {
+    padding: 2rem;
+}
+
+.content_all_mobile > div:first-of-type {
+    color: var(--dk-blue);
+}
+
+.content_all_mobile > div:first-of-type h4 {font-size: 1.1rem; display: flex; align-items:center;}
+
+.content_all_mobile > div:first-of-type h4 span { margin-left: .5rem; font-size: 1.2rem;}
+
+.content_all_mobile > div:first-of-type span{font-size: .8rem;}
+
+
+
+.content_all_boxes_mobile a {
+    background-color: var(--white);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content_all_boxes_mobile:first-of-type a {
+    margin-top: 1rem;
+}
+
+/* Line */
+.content_all_boxes_mobile a > p {
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content_all_boxes_mobile a > div:first-of-type {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content_all_boxes_mobile a > div:first-of-type > span:first-of-type {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.content_all_boxes_mobile a > div:first-of-type > span:last-of-type {
+    font-size: .85rem;
+    color: var(--grey);
+    flex: 1;
+    padding-left: 1rem;
+}
+
+.content_all_boxes_mobile a > div:nth-of-type(2) h4 {
+    font-size: .8rem;
+    margin: .5rem 0;
+    color: var(--dk-blue);
+}
+
+.content_all_boxes_mobile a > div:nth-of-type(2) > p:first-of-type {
+    font-size: .9rem;
+    line-height: 1.5;
+    color: var(--grey);
+}
+
+.content_all_boxes_mobile a > div:nth-of-type(2) > p:last-of-type {
+    margin-top: 1rem;
+    background-color: var(--lt-grey);
+    color: var(--sea-blue);
+    width: 70px;
+    text-align: center;
+    padding: .17rem;
+    border-radius: 10px;
+    font-size: .8rem; font-weight: bold; letter-spacing: .2px
+}
+
+.content_all_boxes_mobile a > div:last-of-type {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 1rem;
+} 
+
+.content_all_boxes_mobile a > div:last-of-type > div {
+    display: flex; align-items: center; justify-content: center;
+}
+
+.content_all_boxes_mobile a > div:last-of-type > div:first-of-type {
+    flex-basis: 15%;
+    display: flex;
+    justify-content: center; align-items: center;
+    gap: .5rem;
+    background-color: var(--lt-grey);
+    padding: .25rem;
+    border-radius: 10px;
+}
+
+.content_all_boxes_mobile a > div:last-of-type > div:first-of-type span,
+.content_all_boxes_mobile a > div:last-of-type > div span {
+    color: var(--dk-blue); font-weight: bold; font-size: .8rem;
+}
+
+.content_all_boxes_mobile a > div:last-of-type > div:last-of-type {
+    justify-content: space-between; align-items: center;
+    flex-basis: 7%;
+    gap: .5rem;
+
+}
+
+.content_all_boxes_mobile a > div:last-of-type > div  svg {
+    width: 15px;
+    height: 15px;
+}
+

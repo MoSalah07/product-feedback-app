@@ -1,0 +1,128 @@
+.feed_back_content a {
+  margin-top: 1.5rem;
+  background-color: var(--white);
+  padding: 2rem 1.5rem;
+  /* height: 150px; */
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  border: 1px solid transparent;
+  transition: border 0.3s linear;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.feed_back_content a:hover {
+  border-color: var(--purple);
+}
+
+.feed_back_content a div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feed_back_content a div:first-of-type > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--lt-grey);
+  color: var(--v-dk-blue);
+  border-radius: 10px;
+  width: 50px;
+  height: 60px;
+  transition: background-color 0.3s linear;
+}
+
+/* Group Hover Likes Box And TypeBox In More Pages */
+.feed_back_content a div:first-of-type > div:hover,
+.feed_back_content a div:nth-of-type(2) span:hover {
+  background-color: #cfd7ff;
+}
+
+.feed_back_content a div:first-of-type > div > b {
+  font-size: 0.9rem;
+}
+
+/* Nth Of Type 2 */
+
+
+.feed_back_content a div:nth-of-type(2) {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.feed_back_content a div:nth-of-type(2) h3 {
+  color: var(--dk-blue);
+}
+
+.feed_back_content a div:nth-of-type(2) p {
+  color: var(--grey);
+}
+
+.feed_back_content a div:nth-of-type(2) span {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 10px;
+  background-color: var(--lt-grey);
+  color: var(--sea-blue);
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: -0.2;
+  font-weight: 700;
+  text-align: center;
+  transition: background-color .3s linear;
+}
+
+
+/* Last Of Type */
+
+.feed_back_content a > div:last-of-type {
+  justify-self: flex-end;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.feed_back_content a > div:last-of-type h3 {
+  font-size: 1rem;
+}
+
+
+@media (max-width: 550px) {
+
+  .feed_back_content a {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 1.5rem 1rem;
+  }
+
+  .feed_back_content a  > div:nth-of-type(2) {
+    grid-row: 1 / 4;
+    display: grid;
+    margin: 1rem 0;
+  }
+
+  .feed_back_content a  > div:first-of-type {
+    grid-row: 4 /5;
+    justify-content: flex-start;
+  }
+
+  .feed_back_content a  > div:first-of-type  > div {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0rem;
+    height: 30px;
+    width: 80px;
+  }
+  .feed_back_content a  > div:last-of-type {
+    grid-row: 4 / 5;
+  } 
+}
